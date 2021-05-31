@@ -5,7 +5,7 @@ mat-sidenav-container{
   margin-right: 15px;
 }
 
-mat-side-nav, mat-sidenav-content {
+mat-side-nav {
   padding: 16px;
 }
 

@@ -16,6 +16,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { TrackListComponent } from './track-list/track-list.component';
 import { ArtistListComponent } from './artist-list/artist-list.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
     SideNavComponent,
     TrackListComponent,
     ArtistListComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
