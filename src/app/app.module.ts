@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,7 +17,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { TrackListComponent } from './track-list/track-list.component';
 import { ArtistListComponent } from './artist-list/artist-list.component';
 import { FavoritesComponent } from './favorites/favorites.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SearchBarComponent } from './searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatIconModule,
     LayoutModule,
