@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { CrudService } from "./crud.service";
+import { DeezerService } from './services/deezer.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent implements OnInit {
 
   Users: any = [];
 
-  constructor(public crudService: CrudService) { }
+  constructor(public deezerService: DeezerService) { }
 
   ngOnInit() {
 
