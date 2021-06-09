@@ -10,8 +10,22 @@ import { retry, catchError } from 'rxjs/operators';
 export class DeezerService {
 
   constructor(private httpClient: HttpClient) { }
-  searchArtist(): Observable<any> {
-    return this.httpClient.get<any>('')
+  searchArtist(q: string): Observable<any> {
+    const options = {
+      params: { q: q }
+    };
+    return this.httpClient.get<any>('/api/search/artist', options)
+    .pipe(
+      retry(1),
+      catchError(this.httpError)
+    )
+  }
+
+  searchAlbum(q: string): Observable<any> {
+    const options = {
+      params: { q: q }
+    };
+    return this.httpClient.get<any>('/api/search/album', options)
     .pipe(
       retry(1),
       catchError(this.httpError)

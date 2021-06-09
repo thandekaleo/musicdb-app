@@ -18,6 +18,7 @@ import { TrackListComponent } from './track-list/track-list.component';
 import { ArtistListComponent } from './artist-list/artist-list.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { SearchBarComponent } from './searchbar/searchbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SearchBarComponent } from './searchbar/searchbar.component';
     MatToolbarModule,
     MatButtonModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,9 +1,4 @@
 <div class="top-bar">
-  <form class="search-form">
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="search">
-      <mat-icon>search</mat-icon>
-    </mat-form-field>
-  </form>
+  <input #input [(ngModel)]="searchText" type="text" (keydown.enter)="search()" placeholder="search">
+  <mat-icon>search</mat-icon>
 </div>
-
