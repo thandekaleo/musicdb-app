@@ -21,17 +21,6 @@ export class DeezerService {
     )
   }
 
-  searchAlbum(q: string): Observable<any> {
-    const options = {
-      params: { q: q }
-    };
-    return this.httpClient.get<any>('/api/search/album', options)
-    .pipe(
-      retry(1),
-      catchError(this.httpError)
-    )
-  }
-
   httpError(error: { error: { message: string; }; status: any; message: any; }) {
     let msg = '';
     if(error.error instanceof ErrorEvent) {
