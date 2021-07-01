@@ -1,5 +1,6 @@
 export interface Artist {
   name: string;
-  link: string;
-  picture: string;
+  picture_medium: string;
+  nb_album: number;
+  nb_fan: number;
 }
