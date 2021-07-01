@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ArtistListComponent } from './artist-list/artist-list.component';
-import { TrackListComponent } from './track-list/track-list.component';
+import { AlbumListComponent } from './album-list/album-list.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 
 const routes: Routes = [
-  { path: '', component: ArtistListComponent },
+  { path: '', redirectTo: 'artist-list', pathMatch: 'full'},
   { path: 'artist-list', component: ArtistListComponent },
-  { path: 'track-list', component: TrackListComponent },
+  { path: 'album-list', component: AlbumListComponent },
   { path: 'favorites', component: FavoritesComponent }
 ];
 

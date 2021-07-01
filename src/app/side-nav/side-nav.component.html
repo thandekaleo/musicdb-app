@@ -7,27 +7,18 @@
 </div>
 
 <mat-nav-list role="navigation">
-  <a class="active-link" mat-list-item routerLink="/artist-list" routerLinkActive="active">
-    <div mat-line>
-      <mat-icon>podcasts</mat-icon>
-      <span class="sidebar-nav-label">Podcats</span>
-    </div>
+  <a mat-list-item routerLink="/artist-list" routerLinkActive="active">
+      <mat-icon>group</mat-icon>
+      <span class="sidebar-nav-label">Artists</span>
   </a>
-</mat-nav-list>
-<mat-nav-list role="navigation">
-  <a class="active-link" mat-list-item routerLink="/track-list" routerLinkActive="active">
-    <div mat-line>
-      <mat-icon>music_note</mat-icon>
-      <span class="sidebar-nav-label">Music</span>
-    </div>
-  </a>
-</mat-nav-list>
 
-<mat-nav-list role="navigation">
-  <a class="active-link" mat-list-item routerLink="/favorites" routerLinkActive="active">
-    <div mat-line>
+  <a mat-list-item routerLink="/album-list" routerLinkActive="active">
+      <mat-icon>music_note</mat-icon>
+      <span class="sidebar-nav-label">Albums</span>
+  </a>
+
+  <a mat-list-item routerLink="/favorites" routerLinkActive="active">
       <mat-icon>favorite</mat-icon>
       <span class="sidebar-nav-label">Favorites</span>
-    </div>
   </a>
 </mat-nav-list>

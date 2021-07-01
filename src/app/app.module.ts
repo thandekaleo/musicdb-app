@@ -14,7 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
-import { TrackListComponent } from './track-list/track-list.component';
+import { AlbumListComponent } from './album-list/album-list.component';
 import { ArtistListComponent } from './artist-list/artist-list.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { SearchBarComponent } from './searchbar/searchbar.component';
@@ -24,7 +24,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     SideNavComponent,
-    TrackListComponent,
+    AlbumListComponent,
     ArtistListComponent,
     FavoritesComponent,
     SearchBarComponent
