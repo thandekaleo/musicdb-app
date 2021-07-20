@@ -29,7 +29,7 @@ export class ArtistDetailComponent implements OnInit {
     type:'',
   };
 
-  album: Album = {
+  album: Album [] = [{
     id: 0,
     title: '',
     upc: 0,
@@ -45,7 +45,7 @@ export class ArtistDetailComponent implements OnInit {
     nb_tracks: 0,
     duration: 0,
     release_date:'',
-  };
+  }];
 
   constructor(private activeRoute: ActivatedRoute, private deezerService: DeezerService) {
     this.activeRoute.queryParams.subscribe((qp) => {
