@@ -4,12 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { ArtistListComponent } from './artist-list/artist-list.component';
 import { AlbumListComponent } from './album-list/album-list.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { SearchBarComponent } from './searchbar/searchbar.component';
+import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'artist-list', pathMatch: 'full'},
-  { path: 'artist-list', component: ArtistListComponent },
+  { path: '', redirectTo: 'artist-search', pathMatch: 'full'},
+  { path: 'artist-detail/:id', component: ArtistDetailComponent },
   { path: 'album-list', component: AlbumListComponent },
-  { path: 'favorites', component: FavoritesComponent }
+  { path: 'favorites', component: FavoritesComponent },
+  { path: 'artist-search', component: SearchBarComponent}
 ];
 
 @NgModule({
@@ -17,3 +20,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

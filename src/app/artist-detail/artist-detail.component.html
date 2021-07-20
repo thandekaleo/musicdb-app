@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="left">
+    <img class="artist-thumb" [src]="artist.picture_xl">
+    <div class="artist-header-text">
+      <h1>{{artist.name}}</h1>
+      <div>{{artist.nb_fan}} fans</div>
+    </div>
+  </div>
+  <div class="right">
+    <h2>Top tracks</h2>
+    <div>Top track data will go in here</div>
+  </div>
+
+  <div class="albums-section">
+
+    <h2>Albums</h2>
+    <div class="album-block" *ngFor="let albumItems of album">
+      <!--img class="cover_medium" src="../../assets/images/james-blake-albumjpg.jpeg"-->
+      <img class="cover_medium" [src]="albumItems.cover_medium">
+      <div class="title">{{albumItems.title}}</div>
+      <div class="year"><b>Year:</b>{{albumItems.release_date}}</div>
+    </div>
+
+  </div>
+
+</div>
+
