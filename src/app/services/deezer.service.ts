@@ -15,22 +15,23 @@ export class DeezerService {
       params: { q: q }
     };
     return this.httpClient.get<any>('/api/search/artist', options)
-    .pipe(
-      retry(1),
-      catchError(this.httpError)
-    )
   }
 
-  httpError(error: { error: { message: string; }; status: any; message: any; }) {
-    let msg = '';
-    if(error.error instanceof ErrorEvent) {
-      // client side error
-      msg = error.error.message;
-    } else {
-      // server side error
-      msg = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    console.log(msg);
-    return throwError(msg);
+  getAlbums(q: string): Observable<any> {
+    const options = {
+      params: { q: q }
+    };
+    return this.httpClient.get<any>('/api/album', options)
   }
+
+
+  getArtist(q: string): Observable<any> {
+    return this.httpClient.get<any>('/api/artist/'+ q,{headers: { Accept: 'application/json' }})
+  }
+
+
+  getArtistAlbum(q: string): Observable<any> {
+    return this.httpClient.get<any>('/api/artist/'+ q + '/albums',{headers: { Accept: 'application/json' }})
+  }
+
 }
