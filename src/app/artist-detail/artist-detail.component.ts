@@ -57,9 +57,13 @@ export class ArtistDetailComponent implements OnInit {
         this.artist = data;
       });
 
-      this.deezerService.getArtistAlbum (this.artistID).subscribe((data: any) => {
-        console.log(data);
+      this.deezerService.getArtistAlbum (this.artistID).subscribe(({data, next, total}) => {
+        //console.log(data);
+        console.log(next);
+        console.log(total);
         this.album = data;
+        //this.album = next;
+        //this.album = total;
       });
 
     });
