@@ -59,7 +59,6 @@ export class ArtistDetailComponent implements OnInit {
         //console.log(data);
         this.artist = data;
       });
-
       // this.deezerService.getArtistAlbum (this.artistID).subscribe((response: any) => {
       //   console.log(response);
       //   this.album = response?.data;
@@ -69,6 +68,13 @@ export class ArtistDetailComponent implements OnInit {
         //console.log(next);
         this.album = data;
         this.total = total;
+      this.deezerService.getArtistAlbum (this.artistID).subscribe(({data, next, total}) => {
+        //console.log(data);
+        console.log(next);
+        console.log(total);
+        this.album = data;
+        //this.album = next;
+        //this.album = total;
       });
 
     });
