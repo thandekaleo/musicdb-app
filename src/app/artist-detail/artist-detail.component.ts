@@ -11,6 +11,7 @@ import { DeezerService } from '../services/deezer.service';
 })
 
 export class ArtistDetailComponent implements OnInit {
+  YearPipe: any;
   artistID: string = '';
 
   artist: Artist = {
@@ -47,16 +48,26 @@ export class ArtistDetailComponent implements OnInit {
     release_date:'',
   }];
 
+  total = 0;
   constructor(private activeRoute: ActivatedRoute, private deezerService: DeezerService) {
     this.activeRoute.queryParams.subscribe((qp) => {
       console.log('Get Router Params:', this.activeRoute.snapshot);
       this.artistID = this.activeRoute.snapshot.params['id'];
 
+
       this.deezerService.getArtist (this.artistID).subscribe((data: any) => {
         //console.log(data);
         this.artist = data;
       });
+      // this.deezerService.getArtistAlbum (this.artistID).subscribe((response: any) => {
+      //   console.log(response);
+      //   this.album = response?.data;
+      // });
 
+      this.deezerService.getArtistAlbum (this.artistID).subscribe(({data, next, total}) => {
+        //console.log(next);
+        this.album = data;
+        this.total = total;
       this.deezerService.getArtistAlbum (this.artistID).subscribe(({data, next, total}) => {
         //console.log(data);
         console.log(next);
@@ -73,5 +84,3 @@ export class ArtistDetailComponent implements OnInit {
   }
 
 }
-
-

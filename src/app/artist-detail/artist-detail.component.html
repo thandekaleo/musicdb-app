@@ -3,20 +3,21 @@
     <img class="artist-thumb" [src]="artist.picture_xl">
     <div class="artist-header-text">
       <h1>{{artist.name}}</h1>
-      <div>{{artist.nb_fan}} fans</div>
+      <div>{{artist.nb_fan | shortNumber}} fans</div>
     </div>
   </div>
   <div class="right">
     <h2>Top tracks</h2>
-    <div>Top track data will go in here</div>
+    <hr>
+    <div>Top track list will go in here </div>
   </div>
 
   <div class="albums-section">
-
-    <h2>Albums</h2>
+    <h2 class="p-l">{{total}} Albums</h2>
     <div class="album-block" *ngFor="let data of album">
       <img class="cover_medium" [src]="data.cover_medium">
       <div class="title">{{data.title}}</div>
+      <div class="year"><b>Year: </b>{{data.release_date | date: "YYYY"}}</div>
       <div class="year"><b>Year: </b>{{data.release_date}}</div>
     </div>
 

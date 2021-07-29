@@ -9,7 +9,7 @@
     <div class="thumbnail-detail">
       <div><a [routerLink]="['/artist-detail', data.id]">{{data.name}}</a></div>
       <div>{{data.nb_album}} <i>Albums</i></div>
-      <div>{{data.nb_fan}} Fans</div>
+      <div>{{data.nb_fan | shortNumber}} Fans</div>
     </div>
   </div>
 </div>

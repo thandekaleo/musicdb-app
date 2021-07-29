@@ -21,6 +21,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { SearchBarComponent } from './searchbar/searchbar.component';
 import { FormsModule } from '@angular/forms';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
+import { ShortNumberPipe } from './pipes/short-number.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
     ArtistListComponent,
     FavoritesComponent,
     SearchBarComponent,
-    ArtistDetailComponent
+    ArtistDetailComponent,
+    ShortNumberPipe,
   ],
   imports: [
     BrowserModule,
