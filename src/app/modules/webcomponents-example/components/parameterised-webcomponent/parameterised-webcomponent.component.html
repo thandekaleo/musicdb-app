@@ -1,0 +1,6 @@
+<div class="search-bar">
+  <input #input [(ngModel)]="searchText" type="text" (keydown.enter)="search()" placeholder="Search for a random dad joke..." />
+  <mat-icon *ngIf="!searchSpinner" (click)="search()">search</mat-icon>
+  <mat-spinner *ngIf="searchSpinner" [diameter]="26" [strokeWidth]="2"></mat-spinner>
+</div>
+<search-dadjoke [query]="searchQuery"></search-dadjoke>

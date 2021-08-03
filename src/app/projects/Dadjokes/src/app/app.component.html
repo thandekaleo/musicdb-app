@@ -1,0 +1,16 @@
+<div *ngIf="!error" class="router-container">
+  <router-outlet></router-outlet>
+</div>
+<div *ngIf="error" class="router-container" fxLayout="column">
+  <div class="error-display">
+    <img src="assets/images/robbot-error.gif" alt="" />
+    <h1>Aaah! Something went wrong</h1>
+    <p>Brace yourself while we get the issue fixed.</p>
+    <p>You could also <a (click)="refreshPage()">refresh</a> the page and try again.</p>
+  </div>
+  <div class="error-detail" (click)="toggleErrorDetail()">
+    <mat-card>
+      <p><mat-icon>error</mat-icon> <span>Click here to see the detailed error.</span></p>
+    </mat-card>
+  </div>
+</div>

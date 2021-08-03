@@ -1,0 +1,39 @@
+.router-container {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.error-display {
+  background-color: #fff;
+  text-align: center;
+  height: 93vh;
+  img {
+    max-height: 90%;
+  }
+  a {
+    color: #ff3b30;
+    cursor: pointer;
+  }
+}
+
+.error-detail {
+  position: relative;
+  align-self: flex-end;
+  width: 100%;
+  text-align: right;
+  mat-card {
+    background: #ff3b30;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0;
+    cursor: pointer;
+    mat-icon {
+      margin: 10px;
+    }
+    span {
+      vertical-align: super;
+    }
+  }
+}

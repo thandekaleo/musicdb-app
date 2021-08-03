@@ -11,7 +11,7 @@ import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppComponent } from './app.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
@@ -22,6 +22,7 @@ import { SearchBarComponent } from './searchbar/searchbar.component';
 import { FormsModule } from '@angular/forms';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
 import { ShortNumberPipe } from './pipes/short-number.pipe';
+import { WebComponentsExampleModule } from './modules/webcomponents-example/webcomponents-example.module';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ShortNumberPipe } from './pipes/short-number.pipe';
     MatListModule,
     MatSidenavModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    WebComponentsExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -54,4 +56,4 @@ import { ShortNumberPipe } from './pipes/short-number.pipe';
     CUSTOM_ELEMENTS_SCHEMA
   ]
 })
-export class AppModule { }
+export class AppModule {}

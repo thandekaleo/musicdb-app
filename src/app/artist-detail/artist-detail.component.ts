@@ -65,8 +65,7 @@ export class ArtistDetailComponent {
         this.total = total;
 
         this.deezerService.getArtistAlbum (this.artistID).subscribe(({data, next, total}) => {
-          console.log(next);
-          console.log(total);
+          //console.log(total);
           this.album = data;
         });
       });

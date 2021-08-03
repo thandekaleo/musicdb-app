@@ -1,0 +1,13 @@
+<div class="error-detail-dialog">
+  <h2 mat-dialog-title><mat-icon>error</mat-icon> <span>Error Detail</span></h2>
+  <mat-dialog-content class="mat-typography">
+  <div *ngFor="let error of errorDetail | keyvalue">
+    <h3>{{error.value.url}}:</h3>
+    <pre>{{getJson(error.value.errorText) | json}}</pre>
+    <pre>{{getJson(error.value.description) | json}}</pre>
+  </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Done</button>
+  </mat-dialog-actions>
+</div>

@@ -1,0 +1,15 @@
+.error-detail-dialog {
+  .mat-dialog-container {
+    background: #ff3b30;
+    color: #fff;
+    padding: 0;
+  }
+}
+h2 {
+  mat-icon {
+    margin: 10px;
+  }
+  span {
+    vertical-align: text-bottom;
+  }
+}
