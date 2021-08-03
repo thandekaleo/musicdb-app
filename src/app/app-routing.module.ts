@@ -10,6 +10,7 @@ import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
 const routes: Routes = [
   { path: '', redirectTo: 'artist-search', pathMatch: 'full'},
   { path: 'artist-detail/:id', component: ArtistDetailComponent },
+  { path: 'artist-list', component: ArtistListComponent },
   { path: 'album-list', component: AlbumListComponent },
   { path: 'favorites', component: FavoritesComponent },
   { path: 'artist-search', component: SearchBarComponent}
