@@ -34,4 +34,8 @@ export class DeezerService {
     return this.httpClient.get<any>('/api/artist/'+ q + '/albums',{headers: { Accept: 'application/json' }})
   }
 
+  getTopTracks(q: string): Observable<any>{
+    return this.httpClient.get('/api/artist/' + q + '/top?limit=5', {headers: { Accept: 'application/json' }});
+  }
+
 }

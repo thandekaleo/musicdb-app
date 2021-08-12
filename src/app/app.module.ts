@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
 import { ShortNumberPipe } from './pipes/short-number.pipe';
 import { WebComponentsExampleModule } from './modules/webcomponents-example/webcomponents-example.module';
+import { TrackListComponent } from './track-list/track-list.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { WebComponentsExampleModule } from './modules/webcomponents-example/webc
     SearchBarComponent,
     ArtistDetailComponent,
     ShortNumberPipe,
+    TrackListComponent,
   ],
   imports: [
     BrowserModule,

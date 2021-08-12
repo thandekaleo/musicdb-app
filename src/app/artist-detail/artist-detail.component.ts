@@ -54,21 +54,15 @@ export class ArtistDetailComponent {
       console.log('Get Router Params:', this.activeRoute.snapshot);
       this.artistID = this.activeRoute.snapshot.params['id'];
 
-
       this.deezerService.getArtist (this.artistID).subscribe((data: any) => {
         this.artist = data;
       });
 
       this.deezerService.getArtistAlbum (this.artistID).subscribe(({data, next, total}) => {
-
         this.album = data;
         this.total = total;
-
-        this.deezerService.getArtistAlbum (this.artistID).subscribe(({data, next, total}) => {
-          //console.log(total);
-          this.album = data;
-        });
       });
+
     });
   }
 }
