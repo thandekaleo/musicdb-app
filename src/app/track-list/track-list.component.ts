@@ -13,17 +13,18 @@ const ELEMENT_DATA: Track [] = [];
 
 
 export class TrackListComponent implements OnInit {
-  tracks: string = '';
+  //tracks: string = '';
   artistID: string = '';
 
   displayedColumns: string[] = ['position','title','duration'];
   dataSource = ELEMENT_DATA;
 
   constructor(private activeRoute: ActivatedRoute, private deezerService: DeezerService) {
-
-      this.deezerService.getTopTracks(this.artistID).subscribe(({ data }: any) => {
-        this.tracks = data;
-        console.log ("This is your" + data);
+    this.artistID = this.activeRoute.snapshot.params['id'];
+      this.deezerService.getTopTracks(this.artistID).subscribe(({data}: any) => {
+        //this.tracks = data;
+        this.dataSource = data;
+        console.log (data);
       });
 
   }
