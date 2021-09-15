@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritesComponent implements OnInit {
 
+  latitude = -25.853311268034968;
+  longitude = 28.19204716931305;
+
   constructor() { }
 
   ngOnInit(): void {
