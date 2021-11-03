@@ -1,8 +1,0 @@
-<mat-card>
-  <mat-card-title>Searched Dad Jokes</mat-card-title>
-  <mat-spinner *ngIf="isLoading" [diameter]="30"></mat-spinner>
-  <mat-card-content *ngIf="!isLoading">
-    <p *ngFor="let joke of searchResults?.results"  [innerHTML]="joke?.joke | highlightSearch: searchTerm">{{joke?.joke}}</p>
-    <p class="total-results">Total Results: {{searchResults?.total_jokes}}</p>
-  </mat-card-content>
-</mat-card>

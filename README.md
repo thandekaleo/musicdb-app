@@ -30,6 +30,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## API
 Deezer API reference https://developers.deezer.com/api
 
-
-
-## Microfrontend Dad Joke app

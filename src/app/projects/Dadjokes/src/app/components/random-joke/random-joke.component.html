@@ -1,8 +1,0 @@
-<mat-card>
-  <mat-card-title>Random Dad Joke</mat-card-title>
-  <mat-spinner *ngIf="isLoading" [diameter]="30"></mat-spinner>
-  <mat-card-content *ngIf="!isLoading">
-    <p>{{joke?.joke}}</p>
-    <button color="primary" (click)="loadNewJoke()" mat-raised-button>Another!</button>
-  </mat-card-content>
-</mat-card>
