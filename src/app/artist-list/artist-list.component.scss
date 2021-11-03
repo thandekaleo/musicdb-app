@@ -1,3 +1,17 @@
 section {
   margin: 20px;
 }
+
+.result-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+
+  > .thumbnail {
+    margin: 0 0 20px 20px;
+    width: 220px;
+  }
+  img {
+    max-width: 200px;
+  }
+}

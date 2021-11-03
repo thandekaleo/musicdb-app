@@ -12,7 +12,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
-import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
@@ -51,10 +50,7 @@ import { TrackListComponent } from './track-list/track-list.component';
     MatSidenavModule,
     FormsModule,
     MatTableModule,
-    WebComponentsExampleModule,
-    AgmCoreModule.forRoot ({
-      apiKey: 'AIzaSyBMPjidhWDrYFqwgpePqwP6IA4fhXPOKrM'
-    })
+    WebComponentsExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent],

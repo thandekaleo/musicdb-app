@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Artist } from '../models/artist-response';
+import { DeezerService } from '../services/deezer.service';
 
 @Component({
   selector: 'app-artist-list',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./artist-list.component.scss']
 })
 export class ArtistListComponent implements OnInit {
+  public artists: Artist[] = [];
 
-  constructor() { }
+  constructor(public artistService: DeezerService ) { }
 
   ngOnInit(): void {
+    this.artistService.getTopArtist().subscribe(
+      response=>{
+        this.artists = response.data;
+        console.log(response);
+      }
+    )
   }
 
 }

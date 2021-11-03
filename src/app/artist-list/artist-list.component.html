@@ -1,3 +1,17 @@
 <section>
-  <random-dadjoke></random-dadjoke>
+  <h1>Top artists</h1>
+  <div class="result-container">
+    <div class="thumbnail" *ngFor="let data of artists">
+
+      <div class="thumbnail-img">
+        <img [src]="data.picture_medium">
+      </div>
+
+      <div class="thumbnail-detail">
+        <div>{{data.name}}</div>
+        <div>{{data.nb_album}}</div>
+      </div>
+
+    </div>
+  </div>
 </section>
